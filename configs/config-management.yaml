@@ -1,0 +1,13 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  git:
+    syncRepo: https://github.com/Abdullah02-Sec/anthos-configs.git
+    syncBranch: main
+    secretType: none
+    policyDir: "configs"
+  policyController:
+    enabled: true
+
